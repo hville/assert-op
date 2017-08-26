@@ -8,6 +8,6 @@
 ## [Unreleased]
 - ~~Removed, Changed, Deprecated, Added, Fixed, Security~~
 
-## [0.0.1] - 2017-08-26
+## [0.1.0] - 2017-08-26
 ### Added
 - First publish
