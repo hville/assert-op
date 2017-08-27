@@ -1,5 +1,5 @@
 /* hugov@runbox.com | https://github.com/hville/cotest.git | license:MIT */
-var cotest = (function () {
+var assertOp = (function () {
 'use strict';
 
 /* eslint-disable eqeqeq */
