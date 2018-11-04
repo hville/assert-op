@@ -8,6 +8,11 @@
 ## [Unreleased]
 - ~~Removed, Changed, Deprecated, Added, Fixed, Security~~
 
+## [0.2.0] - 2018-11-04
+### Changed
+- cjs modules only
+- unescape strings
+
 ## [0.1.0] - 2017-08-26
 ### Added
 - First publish
