@@ -1,6 +1,6 @@
 /* eslint no-console: 0, no-loop-func: 0*/
 // @ts-ignore
-var a = require('../dist/index.js')
+var a = require('../')
 
 //function logE(e) {console.log('ERR:',e.message); return true}
 function fail() { throw Error('err') }
