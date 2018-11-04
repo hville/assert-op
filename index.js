@@ -7,7 +7,7 @@ var max = 50
 var ops = {
 	'{==}': deepEqual,
 	'{===}': deepStrictEqual,
-	'==' : function(v,r) { return v == r },
+	'==' : function(v,r) { return v == r }, //eslint-disable-line eqeqeq
 	'===' : function(v,r) { return v === r },
 	'>' : function(v,r) { return v > r },
 	'<' : function(v,r) { return v < r },

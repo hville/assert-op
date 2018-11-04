@@ -106,15 +106,15 @@ console.log('deepEqual Map')
 a('{==}', new Map([[1,2]]), new Map([[1,2]]))
 a('{==}', new Map([[1,'2']]), new Map([[1,2]]))
 a('!{==}', new Map([[1,'2']]), new Map([['1',2]]))
-	// @ts-ignore
+// @ts-ignore
 a('{==}', new Map([['1',2], [1,2]]), new Map([[1,2], ['1',2]]))
 
 console.log('deepStrictEqual Map')
 a('{===}', new Map([[1,2]]), new Map([[1,2]]))
 a('!{===}', new Map([['1',2]]), new Map([[1,2]]))
-	// @ts-ignore
+// @ts-ignore
 a('{===}', new Map([['1',2], [1,2]]), new Map([[1,2], ['1',2]]))
-	// @ts-ignore
+// @ts-ignore
 a('{===}', new Map([['1',2], [1,2]]), new Map([['1',2], [1,2]]))
 
 console.log('deepEqual Object')
@@ -133,8 +133,8 @@ a('!{===}', {0:{1: 1}}, {'0': {'1': '1'}})
 a('!{===}', {0:{1: 1, 2:2}}, {0: {1: 1}})
 a('!{===}', {0:{1: 1}}, {0: {1: 1, 2: 2}})
 
-function A(a,b) {this.a = a; this.b = b}
-function B(a,b) {this.a = a; this.b = b}
+function A(aa,bb) { this.a = aa; this.b = bb }
+function B(aa,bb) { this.a = aa; this.b = bb }
 
 console.log('deepEqual Instance')
 a('{==}', new A(1,2), new A(1,2))
