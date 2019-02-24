@@ -2,7 +2,7 @@ var deepEqual = require('./src/deep-equal'),
 		deepStrictEqual = require('./src/deep-strict-equal'),
 		toString = require('./src/to-string')
 
-var max = 50
+var max = 40
 
 var ops = {
 	'{==}': deepEqual,

@@ -1,6 +1,6 @@
 {
 	"name": "assert-op",
-	"version": "0.2.1",
+	"version": "0.3.0",
 	"description": "assertions using comparison operators",
 	"keywords": ["unit test", "test", "assert"],
 	"author": "Hugo Villeneuve",

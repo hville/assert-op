@@ -58,7 +58,7 @@ a('throws', function() { a('!', true) }, /! true$/, 'valid message')
 a('!', null)
 a('throws', function() { a('!', 1) }, /! 1$/, 'valid message')
 a('!', '')
-a('throws', function() { a('!', 'a') }, /! a$/, 'valid message')
+a('throws', function() { a('!', 'a') }, /! "a"$/, 'valid message')
 
 a('!!', true)
 a('throws', function() { a('!!', false) }, /!! false$/, 'valid message')

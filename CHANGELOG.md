@@ -8,6 +8,10 @@
 ## [Unreleased]
 - ~~Removed, Changed, Deprecated, Added, Fixed, Security~~
 
+## [0.3.0] - 2019-02-24
+### Changed
+- quotes in message for strings
+
 ## [0.2.0] - 2018-11-04
 ### Changed
 - cjs modules only
