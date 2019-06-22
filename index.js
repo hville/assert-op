@@ -2,8 +2,6 @@ var deepEqual = require('./src/deep-equal'),
 		deepStrictEqual = require('./src/deep-strict-equal'),
 		toString = require('./src/to-string')
 
-var max = 40
-
 var ops = {
 	'{==}': deepEqual,
 	'{===}': deepStrictEqual,
@@ -41,8 +39,8 @@ module.exports = function(op, val, ref, msg) {
 	if (!fcn) throw Error('invalid operator: ' + op)
 	if (fcn(val, ref) ? not : !not) {
 		var len = fcn.length,
-				vst = toString(val, max),
-				txt = len > 1 ? (vst + ' ' + op + ' ' + toString(ref, max - vst.length)) : (op + ' ' + vst)
+				vst = toString(val),
+				txt = len > 1 ? (vst + ' ' + op + ' ' + toString(ref)) : (op + ' ' + vst)
 		throw Error(msg ? txt + ', ' + msg : txt)
 	}
 }

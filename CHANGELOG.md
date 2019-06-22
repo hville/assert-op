@@ -8,6 +8,10 @@
 ## [Unreleased]
 - ~~Removed, Changed, Deprecated, Added, Fixed, Security~~
 
+## [0.4.0] - 2019-06-22
+### Removed
+- max argument of toString
+
 ## [0.3.0] - 2019-02-24
 ### Changed
 - quotes in message for strings
