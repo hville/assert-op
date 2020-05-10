@@ -1,6 +1,6 @@
 /* eslint no-console: 0, no-loop-func: 0*/
 // @ts-ignore
-import a from '../assert.js'
+import a from './assert.js'
 
 //function logE(e) {console.log('ERR:',e.message); return true}
 function fail() { throw Error('err') }
@@ -153,3 +153,4 @@ a('!{===}', new A(1,2), new A(1,3))
 a('!{===}', new A(1,2), new B(1,2))
 a('!{===}', new A(1,2), new B('1',2))
 a('!{===}', new A(1,2), new B(1,3))
+

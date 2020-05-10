@@ -1,7 +1,7 @@
 /* eslint no-console: 0, no-loop-func: 0*/
 // @ts-ignore
-import a from '../assert.js'
-import {toString} from '../to-string.js'
+import a from './assert.js'
+import {toString} from './to-string.js'
 
 console.log('toString...')
 //number

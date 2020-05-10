@@ -14,7 +14,7 @@
 	"dependencies": {},
 	"devDependencies": {},
 	"scripts": {
-		"test": "node ./tst/assert & node ./tst/to-string",
+		"test": "node ./assert.test.js & node ./to-string.test.js",
 		"prepublishOnly": "npm test"
 	},
 	"license": "MIT"
