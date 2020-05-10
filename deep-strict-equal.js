@@ -1,10 +1,10 @@
-var testOwn = require('./test-own'),
-		testMap = require('./test-map'),
-		testSet = require('./test-set')
+import testOwn from './src/test-own.js'
+import testMap from './src/test-map.js'
+import testSet from './src/test-set.js'
 
 var maxDepth = 50 //for circular refs
 
-module.exports = function deepStrictEqual(val, ref, depth) {
+export function deepStrictEqual(val, ref, depth) {
 	// primitives check
 	if (val === ref) return true
 	if (!val || typeof val !== 'object' || typeof ref !== 'object') return false

@@ -1,6 +1,6 @@
 /* eslint no-console: 0, no-loop-func: 0*/
 // @ts-ignore
-var a = require('../')
+import a from '../assert.js'
 
 function msg(op, val, ref, txt) {
 	try {
@@ -17,14 +17,14 @@ function msg1(op, val, txt) {
 	}
 }
 
-console.log('number')
+console.log('number...')
 msg('===', 123, 456, '123 === 456')
 msg('!==', 123, '123', '123 !== "123"')
 msg('===', 123, 123, '123 !== 123')
-console.log('string')
+console.log('string...')
 msg('===', '123', '456', '"123" === "456"')
 msg1('!', 'a', '! "a"')
-console.log('null')
+console.log('null...')
 msg('!==', null, null, 'null !== null')
-console.log('undefined')
+console.log('undefined...')
 msg('!==', undefined, undefined, 'undefined !== undefined')

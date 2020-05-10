@@ -1,10 +1,10 @@
-var testOwn = require('./test-own'),
-		testMap = require('./test-map'),
-		testSet = require('./test-set')
+import testOwn from './src/test-own.js'
+import testMap from './src/test-map.js'
+import testSet from './src/test-set.js'
 
 var maxDepth = 50 //for circular refs
 
-module.exports = function deepEqual(val, ref, depth) {
+export function deepEqual(val, ref, depth) {
 	// primitives check
 	if (val == ref) return true //eslint-disable-line eqeqeq
 	if (!val || typeof val !== 'object' || typeof ref !== 'object') return false
@@ -20,4 +20,3 @@ module.exports = function deepEqual(val, ref, depth) {
 	// object: own properties
 	return testOwn(val, ref, deepEqual, depth ? ++depth : 1)
 }
-

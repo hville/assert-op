@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD004 MD007 MD010 MD041 MD022 MD024 MD032 -->
+<!-- markdownlint-disable MD004 MD007 MD010 MD041 MD022 MD024 MD032 MD036 -->
 # assert-op
 
 *assertions with javascript comparison operators*
@@ -12,7 +12,7 @@ This originated as an attempt to have assertions that are less verbose because `
 ## Example
 
 ```javascript
-const assert = require('assert-op')
+import assert from 'assert-op'
 
 assert('==', 2, 2)
 assert('!==', 3, 4, 'should be unequal')
@@ -38,7 +38,6 @@ assert('{===}', new Map([[1,2]]), new Map([[1,2]]))
 * Single function
 * Support ES2015 `Set` and `Map`
 * ES Module, Browser IIFE and Node CJS support
-
 
 # License
 

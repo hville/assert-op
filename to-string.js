@@ -1,6 +1,4 @@
-module.exports = toString
-
-function toString(val) {
+export function toString(val) {
 	var c = val && (val.constructor || Object)
 	return c === Array ? '[' + val.map(toString) +']'
 		: c === Object ? ('{' + Object.keys(val).map(kv,val) + '}')

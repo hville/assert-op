@@ -1,4 +1,4 @@
-module.exports = function(val, ref, tst, depth) {
+export default function(val, ref, tst, depth) {
 	var kv = Object.keys(val),
 			kr = Object.keys(ref)
 	if (kv.length !== kr.length) return false

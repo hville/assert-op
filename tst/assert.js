@@ -1,6 +1,6 @@
 /* eslint no-console: 0, no-loop-func: 0*/
 // @ts-ignore
-var a = require('../')
+import a from '../assert.js'
 
 //function logE(e) {console.log('ERR:',e.message); return true}
 function fail() { throw Error('err') }
@@ -35,7 +35,7 @@ a('throws', function() { a('!=', undefined, null) }, /^undefined != null$/, 'val
 
 console.log('>, <, >=, <=, !>, !<, !>=, !<= ...')
 a('>', 3, 2)
-a('throws', function() { a('>', {a:1}, 3) }, /^\{a:1\} > 3$/, 'valid message')
+a('throws', a.bind(null, '>', {a:1}, 3), /^\{a:1\} > 3$/, 'valid message')
 a('>=', -2, -3)
 a('throws', function() { a('>=', [1], 3) }, /^\[1\] >= 3$/, 'valid message')
 a('<', 1, 2)

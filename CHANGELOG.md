@@ -8,6 +8,10 @@
 ## [Unreleased]
 - ~~Removed, Changed, Deprecated, Added, Fixed, Security~~
 
+## [0.5.0] - 2019-06-22
+### Changed
+- to ES module
+
 ## [0.4.0] - 2019-06-22
 ### Removed
 - max argument of toString

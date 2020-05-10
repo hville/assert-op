@@ -1,10 +1,12 @@
 {
 	"name": "assert-op",
-	"version": "0.4.0",
+	"type": "module",
+	"main": "./assert.js",
+	"module": "./assert.js",
+	"version": "0.5.0",
 	"description": "assertions using comparison operators",
 	"keywords": ["unit test", "test", "assert"],
 	"author": "Hugo Villeneuve",
-	"main": "./index.js",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/hville/assert-op.git"

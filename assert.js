@@ -1,6 +1,6 @@
-var deepEqual = require('./src/deep-equal'),
-		deepStrictEqual = require('./src/deep-strict-equal'),
-		toString = require('./src/to-string')
+import {deepEqual} from './deep-equal.js'
+import {deepStrictEqual} from './deep-strict-equal.js'
+import {toString} from './to-string.js'
 
 var ops = {
 	'{==}': deepEqual,
@@ -32,7 +32,7 @@ var ops = {
  * @param {string} [msg]
  * @return {void}
  */
-module.exports = function(op, val, ref, msg) {
+export default function(op, val, ref, msg) {
 	var not = op !== '!' && op[0] === '!',
 			key = !not ? op : op[1] === '=' ? op.slice(1) + '=' : op.slice(1),
 			fcn = ops[key]

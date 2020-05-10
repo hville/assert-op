@@ -1,9 +1,9 @@
 /* eslint no-console: 0, no-loop-func: 0*/
 // @ts-ignore
-var a = require('../'),
-		toString = require('../src/to-string')
+import a from '../assert.js'
+import {toString} from '../to-string.js'
 
-console.log('toString')
+console.log('toString...')
 //number
 a('===', toString(123456789), '123456789')
 //string
