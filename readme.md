@@ -37,7 +37,6 @@ assert('{===}', new Map([[1,2]]), new Map([[1,2]]))
 * `throws` and `!throws` for assert.throws
 * Single function
 * Support ES2015 `Set` and `Map`
-* ES Module, Browser IIFE and Node CJS support
 
 # License
 

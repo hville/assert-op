@@ -3,7 +3,7 @@
 	"type": "module",
 	"main": "./assert.js",
 	"module": "./assert.js",
-	"version": "0.5.0",
+	"version": "0.5.1",
 	"description": "assertions using comparison operators",
 	"keywords": ["unit test", "test", "assert"],
 	"author": "Hugo Villeneuve",
