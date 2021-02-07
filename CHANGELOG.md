@@ -8,6 +8,11 @@
 ## [Unreleased]
 - ~~Removed, Changed, Deprecated, Added, Fixed, Security~~
 
+## [0.6.0] - 2021-02-06
+### Changed
+- tagged templates
+- minimal test runner
+
 ## [0.5.0] - 2019-06-22
 ### Changed
 - to ES module

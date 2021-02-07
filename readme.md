@@ -12,17 +12,20 @@ This originated as an attempt to have assertions that are less verbose because `
 ## Example
 
 ```javascript
-import assert from 'assert-op'
+import t from 'assert-op'
 
-assert('==', 2, 2)
-assert('!==', 3, 4, 'should be unequal')
-assert('<', 1, 2)
-assert('!', null, 'should be falsy')
-assert('!{===}', [], 'str', 'should be notDeepStrictEqual')
-assert('{==}', [2], 2, 'should be deepEqual')
-assert('!==', 3, 4)
-assert('{===}', new Set([1,2]), new Set([1,2]))
-assert('{===}', new Map([[1,2]]), new Map([[1,2]]))
+t('mytest', a => {
+  a('==', 2, 2)
+  a`==`(2, 2, 'this alternate form is also possible')
+  a('!==', 3, 4, 'should be unequal')
+  a('<', 1, 2)
+  a('!', null, 'should be falsy')
+  a('!{===}', [], 'str', 'should be notDeepStrictEqual')
+  a('{==}', [2], 2, 'should be deepEqual')
+  a('!==', 3, 4)
+  a('{===}', new Set([1,2]), new Set([1,2]))
+  a('{===}', new Map([[1,2]]), new Map([[1,2]]))
+})
 ```
 
 ## Features
@@ -35,7 +38,6 @@ assert('{===}', new Map([[1,2]]), new Map([[1,2]]))
   * `{===}`: strictDeepEqual
   * `!{===}`: notStrictDeepEqual
 * `throws` and `!throws` for assert.throws
-* Single function
 * Support ES2015 `Set` and `Map`
 
 # License

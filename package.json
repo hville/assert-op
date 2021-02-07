@@ -1,9 +1,9 @@
 {
 	"name": "assert-op",
 	"type": "module",
-	"main": "./assert.js",
-	"module": "./assert.js",
-	"version": "0.5.1",
+	"main": "./test.js",
+	"module": "./test.js",
+	"version": "0.6.0",
 	"description": "assertions using comparison operators",
 	"keywords": ["unit test", "test", "assert"],
 	"author": "Hugo Villeneuve",
@@ -14,7 +14,7 @@
 	"dependencies": {},
 	"devDependencies": {},
 	"scripts": {
-		"test": "node ./assert.test.js & node ./to-string.test.js",
+		"test": "node ./tst/assert.test.js & node ./tst/to-string.test.js & node ./tst/message.js",
 		"prepublishOnly": "npm test"
 	},
 	"license": "MIT"

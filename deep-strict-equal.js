@@ -22,7 +22,7 @@ export function deepStrictEqual(val, ref, depth) {
 	}
 
 	// object: own properties and strict Equal
-	var toStr = Object.prototype.toString
+	const toStr = Object.prototype.toString
 	return Object.getPrototypeOf(val) === Object.getPrototypeOf(ref) &&
 		toStr.call(val) === toStr.call(ref) &&
 		testOwn(val, ref, deepStrictEqual, depth ? ++depth : 1)
