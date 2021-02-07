@@ -5,7 +5,11 @@
 	"module": "./test.js",
 	"version": "0.6.0",
 	"description": "assertions using comparison operators",
-	"keywords": ["unit test", "test", "assert"],
+	"keywords": [
+		"unit test",
+		"test",
+		"assert"
+	],
 	"author": "Hugo Villeneuve",
 	"repository": {
 		"type": "git",
