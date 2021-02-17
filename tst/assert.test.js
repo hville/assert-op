@@ -6,8 +6,7 @@ import t from '../test.js'
 function fail() { throw Error('err') }
 function pass() { }
 
-t`throws`(a => {
-	a`throws`(fail)
+t(`throws`, a => {
 	a('throws', fail, 'should throw')
 	a('throws', fail, Error)
 	a('throws', fail, ()=>true, 'should throw')
@@ -24,7 +23,7 @@ t('!throws', a=> {
 })
 
 t('===, !==, ==, !=', a=>{
-	a`===`(2, 2)
+	a(`===`, 2, 2)
 	a('===', 2, 2)
 	a('throws', ()=>{ a('===', {}, {}) }, /^\{} === {}$/, 'valid message')
 	a('!==', {}, {})

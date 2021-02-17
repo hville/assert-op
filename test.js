@@ -6,7 +6,6 @@ let tests = [],
 
 export default function test(msg, fcn) {
 	if (!close) close = Promise.resolve().then(end)
-	if (Array.isArray(msg)) return fcn => test(msg[0], fcn)
 	tests.push(new Promise( r => {
 		try {
 			fcn(a)
@@ -20,7 +19,11 @@ export default function test(msg, fcn) {
 function end() {
 	Promise.all(tests)
 		.then( res => {
-			res.forEach( r => r.length === 2 ? console.error('!', r[0], r[1]) :	console.log(' ',r[0]) )
+			res.forEach( r => r.length < 2 ? console.log(' ',r[0]) : console.error(
+				'!', r[0],
+				r[1].message,
+				r[1].stack?.split(/\n/g)[2].trim()
+			))
 			tests = []
 			close = null
 			return fails.length ? Promise.reject(fails) : Promise.resolve()

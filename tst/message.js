@@ -18,21 +18,21 @@ function msg1(op, val, txt) {
 	}
 }
 
-t`number`( a => {
+t(`number`, a => {
 	msg('===', 123, 456, '123 === 456')
 	msg('!==', 123, '123', '123 !== "123"')
 	msg('===', 123, 123, '123 !== 123')
 })
 
-t`string`( a=> {
+t(`string`, a=> {
 	msg('===', '123', '456', '"123" === "456"')
 	msg1('!', 'a', '! "a"')
 })
 
-t`null`( a=> {
+t(`null`, a=> {
 	msg('!==', null, null, 'null !== null')
 })
 
-t`undefined`( a=> {
+t('undefined', a=> {
 	msg('!==', undefined, undefined, 'undefined !== undefined')
 })

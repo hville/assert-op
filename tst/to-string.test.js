@@ -3,7 +3,7 @@
 import t from '../test.js'
 import {toString} from '../to-string.js'
 
-t`toString`( a=> {
+t(`toString`, a=> {
 	//number
 	a('===', toString(123456789), '123456789')
 	//string

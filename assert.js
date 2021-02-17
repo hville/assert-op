@@ -32,7 +32,6 @@ const ops = {
  * @return {void}
  */
 export default function assert(op, val, ref, msg) {
-	if (Array.isArray(op)) return (val, ref, msg) => assert(op[0], val, ref, msg)
 	const not = op[0] === '!' && op.length > 1,
 				key = not ? op[1] === '=' ? op.slice(1) + '=' : op.slice(1) : op,
 				fcn = ops[key]
