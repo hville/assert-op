@@ -16,7 +16,6 @@ t(`toString`, a=> {
 	a('===', toString([1,2]), '[1,2]')
 	a('===', toString([1,2],5), '[1,2]')
 	a('===', toString([1234567890,2345678901]), '[1234567890,2345678901]')
-
 	//null
 	a('===', toString(null), 'null')
 	//undefined
@@ -27,4 +26,8 @@ t(`toString`, a=> {
 	//Object
 	a('===', toString({}), '{}')
 	a('===', toString({a:1,b:2}), '{a:1,b:2}')
+	//built-in Object
+	a('===', toString(new Error), 'Error')
+	a('===', toString(new Set), 'Set')
+	a('===', toString(new Map), 'Map')
 })

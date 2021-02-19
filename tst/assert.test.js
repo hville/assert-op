@@ -162,7 +162,7 @@ t('deepStrictEqual Instance', a => {
 	function A(aa,bb) { this.a = aa; this.b = bb }
 	function B(aa,bb) { this.a = aa; this.b = bb }
 
-	a('{===}', new A(1,2), new A(1,2))
+	a('{===}', new A(1,2), new A(1,3))
 	a('!{===}', new A(1,2), new A('1',2))
 	a('!{===}', new A(1,2), new A(1,3))
 
