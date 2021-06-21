@@ -1,10 +1,10 @@
 export default function(val, ref, tst, depth) {
-	if (ref.constructor !== Set || val.size!== ref.size) return false
+	if ( !(ref instanceof Set && val.size === ref.size) ) return false
 	return tst(setValues(val), setValues(ref), depth)
 }
 
 function setValues(set) {
-	var res = []
+	const res = []
 	set.forEach(push, res)
 	return res
 }

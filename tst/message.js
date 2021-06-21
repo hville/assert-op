@@ -1,6 +1,5 @@
-/* eslint no-console: 0, no-loop-func: 0*/
 // @ts-ignore
-import t from '../test.js'
+import t from '../index.js'
 import a from '../assert.js'
 
 function msg(op, val, ref, txt) {

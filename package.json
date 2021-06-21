@@ -1,9 +1,9 @@
 {
 	"name": "assert-op",
 	"type": "module",
-	"main": "./test.js",
-	"module": "./test.js",
-	"version": "0.8.0",
+	"main": "./index.js",
+	"browser": "./index.js",
+	"version": "1.0.0",
 	"description": "assertions using comparison operators",
 	"keywords": [
 		"unit test",

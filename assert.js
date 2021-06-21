@@ -16,7 +16,7 @@ const ops = {
 		try {
 			fcn()
 		} catch (e) {
-			var typ = typeof validate
+			const typ = typeof validate
 			return !validate || typ === 'string' ? true
 				: typ === 'function' ? (validate.prototype && e instanceof validate) || validate(e)
 				: validate?.test?.(e.message) //regExp
@@ -31,7 +31,7 @@ const ops = {
  * @param {string} [msg]
  * @return {void}
  */
-export default function assert(op, val, ref, msg) {
+export default function(op, val, ref, msg) {
 	const not = op[0] === '!' && op.length > 1,
 				key = not ? op[1] === '=' ? op.slice(1) + '=' : op.slice(1) : op,
 				fcn = ops[key]

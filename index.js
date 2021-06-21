@@ -5,7 +5,7 @@ import a from './assert.js'
  * @param {function => void)} fcn
  * @returns {void}
  */
-export default function test(msg, fcn) {
+export default function(msg, fcn) {
 	try {
 		fcn(a)
 		console.info('.', msg)

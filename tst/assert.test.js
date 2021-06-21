@@ -1,6 +1,5 @@
-/* eslint no-console: 0, no-loop-func: 0*/
 // @ts-ignore
-import t from '../test.js'
+import t from '../index.js'
 
 //function logE(e) {t('ERR:',e.message); return true}
 function fail() { throw Error('err') }
@@ -67,7 +66,7 @@ t('!, !!', a=> {
 	a('!!', 1)
 	a('throws', ()=>{ a('!!', 0) }, /!! 0$/, 'valid message')
 	a('!!', 'a')
-	a('throws', ()=>{ a('!!', '') }, /! $/, 'valid message')
+	a('throws', ()=>{ a('!!', '') }, /!! ""$/, 'valid message')
 })
 
 t('{===}, {==}, !{===}, !{==} ...', a => {
@@ -76,7 +75,7 @@ t('{===}, {==}, !{===}, !{==} ...', a => {
 	a('{===}', {0:1}, {0:1})
 	a('throws', ()=>{ a('{===}', {0:1}, {1:0}) }, /^\{0:1\} \{===\} \{1:0\}$/, 'valid message')
 	a('{===}', new Set([0,1]), new Set([0,1]))
-	a('throws', ()=>{ a('{===}', new Set([0,1]), new Map([[1,0]])) }, /^\[object Set\] \{===\} \[object Map\]$/, 'valid message')
+	a('throws', ()=>{ a('{===}', new Set([0,1]), new Map([[1,0]])) }, /^\Set \{===\} Map$/, 'valid message')
 })
 
 t('deepEqual Array', a => {
@@ -162,7 +161,7 @@ t('deepStrictEqual Instance', a => {
 	function A(aa,bb) { this.a = aa; this.b = bb }
 	function B(aa,bb) { this.a = aa; this.b = bb }
 
-	a('{===}', new A(1,2), new A(1,3))
+	a('{===}', new A(1,2), new A(1,2))
 	a('!{===}', new A(1,2), new A('1',2))
 	a('!{===}', new A(1,2), new A(1,3))
 

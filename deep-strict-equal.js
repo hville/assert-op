@@ -2,7 +2,7 @@ import testOwn from './src/test-own.js'
 import testMap from './src/test-map.js'
 import testSet from './src/test-set.js'
 
-var maxDepth = 50 //for circular refs
+const maxDepth = 50 //for circular refs
 
 export function deepStrictEqual(val, ref, depth) {
 	// primitives check
@@ -12,12 +12,12 @@ export function deepStrictEqual(val, ref, depth) {
 	if (depth === maxDepth) return false
 
 	// MAP: compare each value by key
-	if (typeof Map !== 'undefined' && val.constructor === Map) {
+	if (typeof Map !== 'undefined' && val instanceof Map) {
 		return testMap(val, ref, deepStrictEqual, depth ? ++depth : 1)
 	}
 
 	// SET: compare each value by order
-	if (typeof Set !== 'undefined' && val.constructor === Set) {
+	if (typeof Set !== 'undefined' && val instanceof Set) {
 		return testSet(val, ref, deepStrictEqual, depth ? ++depth : 1)
 	}
 
