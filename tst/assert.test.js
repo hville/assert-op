@@ -33,6 +33,18 @@ t('===, !==, ==, !=', a=>{
 	a('throws', ()=>{ a('!=', undefined, null) }, /^undefined != null$/, 'valid message')
 })
 
+t('tag `===`, `!==`, `==`, `!=`', a => {
+	a`===`(2, 2)
+	a`===`(2, 2)
+	a`throws`(()=>{ a`===`({}, {}) }, /^\{} === {}$/, 'valid message')
+	a`!==`({}, {})
+	a`throws`(()=>{ a`!==`(2, 2) }, /^2 !== 2$/, 'valid message')
+	a`==`(null, undefined)
+	a`throws`(()=>{ a`==`(null, false) }, /^null == false$/, 'valid message')
+	a`!=`(undefined, true)
+	a`throws`(()=>{ a`!=`(undefined, null) }, /^undefined != null$/, 'valid message')
+})
+
 t('>, <, >=, <=, !>, !<, !>=, !<=', a => {
 	a('>', 3, 2)
 	a('throws', a.bind(null, '>', {a:1}, 3), /^\{a:1\} > 3$/, 'valid message')
