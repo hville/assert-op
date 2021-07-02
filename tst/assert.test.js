@@ -138,11 +138,23 @@ t('deepStrictEqual Map', a => {
 })
 
 t('deepEqual Object', a => {
-	a('{==}', {1: 1}, {'1': '1'})
-	a('{==}', {0:{1: 1}}, {'0': {'1': '1'}})
-	a('!{==}', {0:{1: 1, 2:2}}, {'0': {'1': '1'}})
+	const obj = {'1': '1'}
+	a('{==}', {1: 1}, obj)
+	a('{==}', {0:{1: 1}}, {'0': obj})
+	a('!{==}', {0:{1: 1, 2:2}}, {'0': obj})
 	a('!{==}', {0:{1: 1}}, {'0': {'1': '1', 2: 2}})
 })
+
+t('circular', a => {
+	const obj = {'1': '1'},
+				nest = {obj},
+				copy = {obj}
+	nest.nest=copy.nest=nest
+	a('{==}', copy, nest)
+	a('{===}', copy, nest)
+})
+
+
 
 t('deepStrictEqual Object', a => {
 	a('{===}', {1: 1}, {'1': 1})
